@@ -1,12 +1,10 @@
 import React from 'react';
-import '../css/App.scss';
 import Header from './header';
 
 class App extends React.Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
+        <header className="bg-primary flex flex-col w-full h-screen mx-auto items-center justify-center header">
           <p>
             Edit <code>src/App.js</code> and save to reload.
           </p>
@@ -19,7 +17,6 @@ class App extends React.Component {
             Learn React
           </a>
         </header>
-      </div>
     );
   }
 }
