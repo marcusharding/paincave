@@ -5,8 +5,7 @@ class App extends React.Component {
   render() {
     return (
         <header className="bg-primary flex flex-col w-full h-screen mx-auto items-center justify-center header">
-          <h1>Location based app</h1>
-          <p>Arthur Conan Doyle</p>
+          <h1 className="text-white">PAINCAVE</h1>
         </header>
     );
   }
