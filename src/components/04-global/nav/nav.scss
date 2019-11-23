@@ -1,0 +1,75 @@
+@mixin open {
+    height: 100vh;
+    opacity: 100;
+    display: block;
+    transition-delay: 0ms;
+    transition: opacity 300ms ease;
+    position: absolute;
+  }
+
+// <nav>
+.g-nav {
+    opacity: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: auto;
+    display: flex;
+    text-align: center;
+    position: fixed;
+    // repainting on scroll.
+    // see https://www.youtube.com/watch?v=2vFrZXWiwIc
+    transform: translateZ(0);
+    transition: opacity 300ms ease;
+  
+    &.is-open {
+      @include open;
+    }
+  
+    @media only screen and (min-width: 1024px) {
+      opacity: 100;
+      margin-left: auto;
+      position: relative;
+      align-items: center;
+      height: auto;
+      display: flex;
+    }
+  }
+
+  .g-nav__link {
+    position: relative; 
+    display: inline-block;
+    margin: 0px 20px;
+    outline: none;
+    text-transform: uppercase;
+  
+    // global nav hover after element to show
+    &:after {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      height: 4px;
+      background: rgba(255, 255, 255, 0.7);
+      content: '';
+      opacity: 0;
+      -webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
+      -moz-transition: opacity 0.3s, -moz-transform 0.3s;
+      transition: opacity 0.3s, transform 0.3s;
+      -webkit-transform: translateY(10px);
+      -moz-transform: translateY(10px);
+      transform: translateY(10px);
+    }
+  
+    &:hover {
+      &:after {
+        transform: translateY(0px);
+        opacity: 1;
+      }
+    }
+  
+    @screen md {
+      @apply border-none p-0;
+    }
+  }

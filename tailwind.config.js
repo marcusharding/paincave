@@ -14,7 +14,8 @@ module.exports = {
 
       black: '#000',
       white: '#fff',
-      primary: '#282c34',
+      primary: '#8B0325',
+      offBlack: '#282c34',
 
       gray: {
         100: '#f7fafc',
@@ -349,6 +350,7 @@ module.exports = {
     },
     opacity: {
       '0': '0',
+      '15': '0.15',
       '25': '0.25',
       '50': '0.5',
       '75': '0.75',
