@@ -1,16 +1,15 @@
 import React from 'react';
-import '../../08-helpers/responsive-img/_responsive-img.scss';
+import '../../../styles/main.scss';
 import './homepageHero.scss';
 
 class HomepageHero extends React.Component {
-
-    render() {
+    render(props) {
         return <div className="w-full h-screen relative">
-                    <img alt="homepage header" className="absolute inset-0 object-cover w-full h-full opacity-15" src={require('../../../img/homepage_header.jpg')}></img>
+                    <img alt="homepage header" className="absolute inset-0 object-cover w-full h-full opacity-15" src={require('../../../assets/img/homepage_header.jpg')}></img>
                     <div className="h-full w-full wrapper justify-center flex flex-col items-center">
-                        <div class="absolute headerAthlete flex justify-center">
+                        <div className="absolute headerAthlete flex justify-center">
                             <div className="w-full h-full relative aspect-ratio">
-                                <img className="absolute inset-0 object-cover w-full h-full" alt="" src={require('../../../img/header_athlete.png')} />
+                                <img className="absolute inset-0 object-cover w-full h-full" alt="" src={require('../../../assets/img/header_athlete.png')}></img>
                             </div>
                         </div>
                         <p className="uppercase text-offWhite text-3xl lg:text-6xl"><span className="lg:mx-24">lorem</span> <span className="lg:mx-24">ipsum</span></p>
