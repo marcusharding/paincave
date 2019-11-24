@@ -54,11 +54,23 @@
   display: block;
   top: 50%;
   margin-top: $hamburger-layer-height / -2;
+  width: 100%;
+
+  &:before {
+    width: 75%;
+    position: absolute;
+    right: 0;
+  }
+
+  &:after{
+    width: 50%;
+    position: absolute;
+    right: 0;
+  }
 
   &,
-  &::before,
+  &::before ,
   &::after {
-    width: $hamburger-layer-width;
     height: $hamburger-layer-height;
     background-color: $hamburger-layer-color;
     border-radius: $hamburger-layer-border-radius;
