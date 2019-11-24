@@ -10,11 +10,9 @@ class App extends React.Component {
     return (
       
       <Fragment>
-        <div className="app">
-          
-          {/** HEADER */}
-          <Header
-           />
+        {/** HEADER */}
+        <Header/>
+        <main id="main" className="app">
           {/** HOMPAGE HERO */}
           <section>
             <HomepageHero />
@@ -39,7 +37,7 @@ class App extends React.Component {
           <section className="h-screen">
             
           </section>
-        </div>
+        </main>
       </Fragment>
     );
   }
