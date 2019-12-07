@@ -5,7 +5,7 @@
     z-index: 1000;
     margin: 0;
     overflow: hidden;
-    background-color: black;
+    background-color: #111517;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -17,14 +17,6 @@
     }
 }
 
-.spinner{
-    transition: opacity 1s ease-out;
-    opacity: 0;
-    height: 0;
-    overflow: hidden;
-}
-
-.spinner--active{
-    opacity: 1;
-    height: auto;
+.hidden{
+    display: none;
 }
