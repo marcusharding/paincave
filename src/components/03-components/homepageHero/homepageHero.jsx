@@ -20,9 +20,9 @@ class HomepageHero extends React.Component {
 
     // conditional statement to check wether the state has been updated from the image load
     if((this.state.bgIsLoaded === true)) {
-      SpinnerHandler = 'hidden'
+      SpinnerHandler = 'spinner'
     } else {
-      SpinnerHandler = ''
+      SpinnerHandler = 'spinner spinner--active'
     };
         return (
             <React.Fragment>
