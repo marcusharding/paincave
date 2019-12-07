@@ -6,6 +6,17 @@ import './app.scss';
 
 
 class App extends React.Component {
+  state = {
+    homepage: []
+  }
+  componentDidMount() {
+    fetch('http://paincave-api.marcusjh.co.uk/wp-json/wp/v2/pages/?slug=homepage')
+    .then(res => res.json())
+    .then((data) => {
+      this.setState({ homepage: data })
+    })
+    .catch(console.log)
+  }
   render () {
     return (
       
@@ -15,9 +26,10 @@ class App extends React.Component {
         <main id="main" className="app">
           {/** HOMPAGE HERO */}
           <section>
-            <HomepageHero />
+            <HomepageHero
+              homepage={this.state.homepage}
+             />
           </section>
-
           {/** ABOUT */}
           <section className="h-screen aboutBg">
             
@@ -42,6 +54,5 @@ class App extends React.Component {
     );
   }
 }
-
 
 export default App;
