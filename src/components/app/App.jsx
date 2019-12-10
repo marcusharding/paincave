@@ -10,7 +10,7 @@ class App extends React.Component {
     homepage: []
   }
   componentDidMount() {
-    fetch('http://paincave-api.marcusjh.co.uk/wp-json/wp/v2/pages/?slug=homepage')
+    fetch('https://paincave-api.marcusjh.co.uk/wp-json/wp/v2/pages/?slug=homepage')
     .then(res => res.json())
     .then((data) => {
       this.setState({ homepage: data })
