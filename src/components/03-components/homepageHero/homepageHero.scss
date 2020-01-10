@@ -11,6 +11,32 @@
     }
 }
 
+// Each text on the hero header -- Positioning
+
+.herotxt_a {
+  @media only screen and (min-width: 1024px) {
+    right: 5%;
+    }
+}
+
+.herotxt_b {
+  @media only screen and (min-width: 1024px) {
+   left: 15%;
+    }
+}
+
+.herotxt_c {
+  @media only screen and (min-width: 1024px) {
+    right: 12%;
+    }
+}
+
+.herotxt_d {
+  @media only screen and (min-width: 1024px) {
+    left: 17%;
+    }
+}
+
 
   // Hero image object effects 
 
