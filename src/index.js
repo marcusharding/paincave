@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import App from './components/app/App';
 import './styles/index.css';
 import './styles/main.scss';
-import './styles/framework/_tailwind.scss';
+// import './styles/framework/_tailwind.scss';
 import * as serviceWorker from './serviceWorker';
 
 

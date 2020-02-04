@@ -1,11 +1,11 @@
 import React from 'react';
-import Logo from '../../01-objects/logo';
-import Nav from '../../04-global/nav/nav';
-import Burger from '../../01-objects/burger/burger';
+import { Logo } from '../../01-objects/logo';
+import { Nav } from '../../04-global/nav/nav';
+import { Burger } from '../../01-objects/burger/burger';
 import './header.scss';
 import Headroom from 'react-headroom';
 
-class Header extends React.Component {
+export class Header extends React.Component {
     componentDidMount() {
         window.addEventListener('scroll', this.listenToScroll)
       }
@@ -75,4 +75,3 @@ class Header extends React.Component {
     }
 }
 
-export default Header;

@@ -1,8 +1,9 @@
 import React from 'react';
 import '../../styles/partials/spinner.scss';
 
-class Spinner extends React.Component {
+export class Spinner extends React.Component {
     render() {
+
         return(
             <div className="spinnerContainer">
                 <img alt="" className="spinner" src={require('../../spinner.gif')}/>
@@ -11,4 +12,3 @@ class Spinner extends React.Component {
     }
 }
 
-export default Spinner;

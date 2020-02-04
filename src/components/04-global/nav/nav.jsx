@@ -1,7 +1,7 @@
 import React from 'react';
 import './nav.scss';
 
-class Nav extends React.Component {
+export class Nav extends React.Component {
     render() {
         return ( 
             <nav id="siteNav" className={`g-nav mobile-menu overflow-hidden ${this.props.state.active ? 'nav-is-active': ''}`}>
@@ -26,4 +26,3 @@ class Nav extends React.Component {
     }
 }
 
-export default Nav;
