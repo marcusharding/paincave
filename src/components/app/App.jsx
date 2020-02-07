@@ -5,7 +5,9 @@ import { HomepageHero } from '../03-components/homepageHero/homepageHero';
 import { WhoAreWe } from '../03-components/whoAreWe/whoAreWe';
 import { Shop } from '../03-components/shop/shop';
 import { Gyms } from '../03-components/gyms/gyms';
+import { Athletes } from '../03-components/athletes/athletes';
 import { Spinner } from '../04-global/spinner';
+import { SideMenu } from '../04-global/sideMenu/sideMenu';
 import SmoothScroll from 'smooth-scroll';
 import BackgroundImageOnLoad from 'background-image-on-load';
 import ReadingProgress from '../04-global/ReadingProgress';
@@ -118,7 +120,7 @@ class App extends React.Component {
 
           {/** ATHLETES */}
           <section id="athletes" className="h-screen">
-            
+            <Athletes/>
           </section>
         </main>
 

@@ -16,8 +16,8 @@ export class WhoAreWe extends React.Component {
 
         return(
             <div className="wrapper py-24">
-                <h1 className="text-offWhite uppercase font-bold text-5xl text-center">Who are we</h1>
-                <p className="text-white text-center mx-auto text-xl w-1/2 pb-24">Lorem ipsum dolor sit amet, consetetur Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet, consetetur Lorem ipsum dolor sit amet.</p>
+                <h1 className="text-offWhite uppercase font-bold text-5xl">Who are we</h1>
+                <p className="text-white text-xl w-1/2 pb-24">Lorem ipsum dolor sit amet, consetetur Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet, consetetur Lorem ipsum dolor sit amet.</p>
                 
                 <div className="flex justify-between">
                     {widget}
