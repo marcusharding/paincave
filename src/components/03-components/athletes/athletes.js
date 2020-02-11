@@ -28,7 +28,7 @@ export class Athletes extends React.Component {
     render() {
         return(
             <React.Fragment>
-            <div className="wrapper pb-12 flex items-center">
+            <div className="wrapper py-12 flex items-center">
                 <h1 className="text-offWhite uppercase font-bold text-5xl">Meet Our Athletes</h1>
             </div>
             <div className="flex justify-center h-full justify-center overflow-x-hidden ml-auto slider__container">

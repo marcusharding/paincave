@@ -1,5 +1,4 @@
 import React from 'react';
-import { Fragment } from 'react';
 import { Header } from '../03-components/header/header';
 import { HomepageHero } from '../03-components/homepageHero/homepageHero';
 import { WhoAreWe } from '../03-components/whoAreWe/whoAreWe';
@@ -35,17 +34,20 @@ class App extends React.Component {
 
   render () {
 
-    // Setting api variables
+    
+    const target = React.createRef();
+
+    // Setting api variables for use 
     var athleteImg
     var aboutBg
 
-    // Looping over homepage api and grabbing acf field
+    // Looping over homepage api and grabbing acf field to store in variable
     this.state.homepage.forEach(element => {
     athleteImg = element.acf.athlete_img
     aboutBg = element.acf.about_bg
     });
 
-    // Setting style for about section
+    // Setting about section bg styling
     var aboutSectionStyle = {
       backgroundImage: `url(${aboutBg})`,
       backgroundRepeat: 'no-repeat',
@@ -59,7 +61,7 @@ class App extends React.Component {
       zIndex: -1 
     }
 
-    // creating a variable to adjust wether spinner is shown or not
+    // creating a variable which will be dynamically changed to show or hide the spinner
     var SpinnerHandler = '';
 
     // Controlling body based on state
@@ -74,10 +76,8 @@ class App extends React.Component {
       SpinnerHandler = ''
     };
 
-    const target = React.createRef();
-
     return (  
-      <Fragment>
+      <React.Fragment>
 
         <div className={SpinnerHandler}>
           <Spinner
@@ -105,6 +105,7 @@ class App extends React.Component {
           {/** ABOUT */}
           <section id="about" className="h-screen relative block">
             <WhoAreWe/>
+            {/** About section background */}
             <div style={aboutSectionStyle}></div>
           </section>
 
@@ -133,7 +134,7 @@ class App extends React.Component {
             })}
             onError={err => console.log('error', err)}
           />
-      </Fragment>
+      </React.Fragment>
     );
   }
 }
