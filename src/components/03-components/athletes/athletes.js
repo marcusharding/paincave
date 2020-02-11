@@ -1,45 +1,42 @@
 import React from 'react'
-import { CarouselProvider, Slider, Slide, ButtonBack, ButtonNext } from 'pure-react-carousel'
-import 'pure-react-carousel/dist/react-carousel.es.css';
-import Athlete from '../../../assets/img/athlete.jpg'
+import { Slider } from '../../04-global/slider/slider'
+import AthleteImg from '../../../assets/img/athlete.jpg'
+import './athletes.scss'
+
+const slideData = [
+    {
+      index: 0,
+      src: AthleteImg
+    },
+    {
+      index: 1,
+      src: AthleteImg
+    },
+    {
+      index: 2,
+      src: AthleteImg
+    },
+    {
+      index: 3,
+      src: AthleteImg
+    }
+  ]
+
 
 export class Athletes extends React.Component {
+
     render() {
-        return (
+        return(
             <React.Fragment>
-                <div className="wrapper py-24">
-                    <h1 className="text-offWhite uppercase font-bold text-5xl">meet our athletes</h1>
-                </div>
-                <div class="">
-                    <CarouselProvider
-                        naturalSlideWidth={100}
-                        naturalSlideHeight={125}
-                        totalSlides={3}
-                        visibleSlides={3}
-                        infinite={true}
-                        currentSlide={0}
-                    >
-                        <ButtonBack className="text-white">Back</ButtonBack>
-                        <ButtonNext className="text-white">Next</ButtonNext>
-                        <Slider>
-                            <Slide index={0}>
-                                <div className="relative">
-                                    <img className="absolute inset-0 object-cover" alt="" src={Athlete}></img>
-                                </div>
-                            </Slide>
-                            <Slide index={1}>
-                                <div className="relative">
-                                    <img className="absolute inset-0 object-cover" alt="" src={Athlete}></img>
-                                </div>
-                            </Slide>
-                            <Slide index={2} className="text-white">
-                                <div className="relative">
-                                    <img className="absolute inset-0 object-cover" alt="" src={Athlete}></img>
-                                </div>
-                            </Slide>
-                        </Slider>
-                    </CarouselProvider>
-                </div>
+            <div className="wrapper pb-12 flex items-center">
+                <h1 className="text-offWhite uppercase font-bold text-5xl">Meet Our Athletes</h1>
+            </div>
+            <div className="flex justify-center h-full justify-center overflow-x-hidden ml-auto slider__container">
+                <Slider
+                    slides={slideData}
+                    heading="Athlete Slider"
+                />
+            </div>
             </React.Fragment>
         )
     }

@@ -1,0 +1,42 @@
+.slide--current{
+
+    .athleteModalBtn {
+        opacity: 1;
+        transition: 300ms ease-in;
+    }
+}
+
+.athleteModalBtn {
+    transition: 300ms ease-in;
+    opacity: 0;
+    background-color: white;
+    width: 70px;
+    height: 70px;
+    position: absolute;
+    z-index: 10;
+    right: 0;
+    bottom: 0;
+    margin-right: 15px;
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .athleteModalBtn__cross--a {
+        width: 30%;
+        background-color: black;
+        border: solid 0.8px black;
+        display: block;
+        position: absolute;
+    }
+
+    .athleteModalBtn__cross--b {
+        width: 30%;
+        background-color: black;
+        border: solid 0.7px black;
+        display: block;
+        position: absolute;
+        transform: rotate(90deg);
+    }
+}

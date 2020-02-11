@@ -119,7 +119,7 @@ class App extends React.Component {
           </section>
 
           {/** ATHLETES */}
-          <section id="athletes" className="h-screen">
+          <section id="athletes" className="h-screen relative">
             <Athletes/>
           </section>
         </main>
