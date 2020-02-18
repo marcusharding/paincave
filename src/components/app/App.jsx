@@ -103,24 +103,24 @@ class App extends React.Component {
           </section>
 
           {/** ABOUT */}
-          <section id="about" className="h-screen relative block">
+          <section id="about" className="lg:h-screen relative block py-12 lg:py-24">
             <WhoAreWe/>
             {/** About section background */}
             <div style={aboutSectionStyle}></div>
           </section>
 
           {/** SHOP */}
-          <section id="shop" className="h-screen">
+          <section id="shop" className="lg:h-screen py-12 lg:py-24">
             <Shop/>
           </section>
 
           {/** GYM */}
-          <section id="gym" className="h-screen">
+          <section id="gym" className="lg:h-screen py-12 lg:py-24">
             <Gyms/>
           </section>
 
           {/** ATHLETES */}
-          <section id="athletes" className="h-screen relative">
+          <section id="athletes" className="lg:h-screen relative py-12 lg:py-24">
             <Athletes/>
           </section>
         </main>

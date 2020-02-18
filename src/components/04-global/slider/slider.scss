@@ -18,12 +18,17 @@
 
 .slider__controls {
     display: flex;
-    justify-content: center;
     position: absolute;
-    width: 50%;
-    align-items: center;
+    width: 100%;
     top: 0;
-    padding-top: 4rem;
+    padding-top: 6rem;
+    margin-left: auto;
+    @media only screen and (min-width: 1024px) {
+      justify-content: center;
+      align-items: center;
+      width: 50%;
+      padding-top: 4rem;
+    }
     
     .btn {
       --size: 3rem;
