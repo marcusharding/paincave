@@ -62,7 +62,7 @@ export class Header extends React.Component {
                         <Nav
                         state = {this.state}
                         />
-                        {/* */}
+                        {/* Include burger */}
                         <Burger
                         toggleClass = {this.toggleClass}
                         state = {this.state}

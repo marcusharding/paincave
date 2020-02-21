@@ -2,6 +2,7 @@ import React from 'react'
 import { Slider } from '../../04-global/slider/slider'
 import AthleteImg from '../../../assets/img/athlete.jpg'
 import './athletes.scss'
+import ScrollAnimation from 'react-animate-on-scroll'
 
 const slideData = [
     {
@@ -28,15 +29,19 @@ export class Athletes extends React.Component {
     render() {
         return(
             <React.Fragment>
-            <div className="wrapper flex items-center">
+            <ScrollAnimation animateIn="fadeIn" animateOnce={true}>
+              <div className="wrapper flex items-center">
                 <h1 className="text-offWhite uppercase font-bold text-3xl lg:text-5xl pb-12 lg:pb-0">Meet Our Athletes</h1>
-            </div>
-            <div className="flex justify-center h-full justify-center overflow-x-hidden ml-auto slider__container">
+              </div>
+            </ScrollAnimation>
+            <ScrollAnimation animateIn="fadeIn" animateOnce={true}>
+              <div className="flex justify-center h-full justify-center overflow-x-hidden ml-auto slider__container py-12">
                 <Slider
-                    slides={slideData}
-                    heading="Athlete Slider"
+                  slides={slideData}
+                  heading="Athlete Slider"
                 />
-            </div>
+              </div>
+            </ScrollAnimation>
             </React.Fragment>
         )
     }

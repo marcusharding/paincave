@@ -11,6 +11,18 @@
     }
 }
 
+.headerVideo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  object-fit: cover;
+}
+
 // Each text on the hero header -- Positioning
 
 .herotxt_a {

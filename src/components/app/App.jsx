@@ -1,16 +1,18 @@
-import React from 'react';
-import { Header } from '../03-components/header/header';
-import { HomepageHero } from '../03-components/homepageHero/homepageHero';
-import { WhoAreWe } from '../03-components/whoAreWe/whoAreWe';
-import { Shop } from '../03-components/shop/shop';
-import { Gyms } from '../03-components/gyms/gyms';
-import { Athletes } from '../03-components/athletes/athletes';
-import { Spinner } from '../04-global/spinner';
-import { SideMenu } from '../04-global/sideMenu/sideMenu';
-import SmoothScroll from 'smooth-scroll';
-import BackgroundImageOnLoad from 'background-image-on-load';
-import ReadingProgress from '../04-global/ReadingProgress';
-import './app.scss'; 
+import React from 'react'
+import { Header } from '../03-components/header/header'
+import { HomepageHero } from '../03-components/homepageHero/homepageHero'
+import { WhoAreWe } from '../03-components/whoAreWe/whoAreWe'
+import { Shop } from '../03-components/shop/shop'
+import { Gyms } from '../03-components/gyms/gyms'
+import { Athletes } from '../03-components/athletes/athletes'
+import { Spinner } from '../04-global/spinner'
+import { SideMenu } from '../04-global/sideMenu/sideMenu'
+import { Footer } from '../04-global/footer'
+import SmoothScroll from 'smooth-scroll'
+import BackgroundImageOnLoad from 'background-image-on-load'
+import ReadingProgress from '../04-global/ReadingProgress'
+import './app.scss' 
+import "animate.css/animate.min.css"
 
 
 // Initializing smooth scroll module
@@ -124,6 +126,8 @@ class App extends React.Component {
             <Athletes/>
           </section>
         </main>
+
+        <Footer/>
 
         {/* Using the import to set a src image to be checked for load | adjusting state once loaded */}
         <BackgroundImageOnLoad

@@ -1,3 +1,11 @@
+.gym__container {
+    padding-top: 56.25%;
+    @media only screen and (min-width: 1024px) {
+    height: 450px;
+    padding-top: 0%;
+    }
+}
+
 .gym__overlay--a {
     p {
         transition: ease 600ms;
