@@ -40,3 +40,24 @@
         transform: rotate(90deg);
     }
 }
+
+
+// Information slide out
+
+.athlete-info__wrappper{
+    .athlete-info__content {
+        height: 100%;
+        width: 25%;
+        position: absolute;
+        z-index: 10;
+        visibility: hidden;
+        background-color: #440112;
+        transform: translateX(-5%);
+        transition: 300ms ease;
+        &.active {
+            transform: translateX(96%);
+            visibility: visible;
+        }
+    }
+}
+

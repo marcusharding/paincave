@@ -6,13 +6,14 @@ import Img3 from '../../../assets/img/img3.jpg'
 import Img4 from '../../../assets/img/img4.jpg'
 import ScrollAnimation from 'react-animate-on-scroll'
 
+
 export class Gyms extends React.Component {
     render() {
         return (
             <div className="wrapper">
                 <ScrollAnimation animateIn="fadeIn" animateOnce={true}>
                     <h1 className="text-offWhite uppercase font-bold text-4xl lg:text-5xl pb-6">our gyms</h1>
-                    <p className="text-white text-xl lg:w-1/2 pb-24">Lorem ipsum dolor sit amet, consetetur Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet, consetetur Lorem ipsum dolor sit amet.</p>
+                    <p className="text-white text-xl lg:w-1/2 pb-12">Lorem ipsum dolor sit amet, consetetur Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet, consetetur Lorem ipsum dolor sit amet.</p>
                 </ScrollAnimation>
                 <ScrollAnimation animateIn="fadeIn" animateOnce={true}>
                     <div className="flex flex-wrap">

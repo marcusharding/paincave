@@ -83,10 +83,9 @@ export class Slider extends React.Component {
                 />
             </div>
 
-            <div className='slider' aria-labelledby={headingId}>
+            <div className='slider mb-4' aria-labelledby={headingId}>
                 <ul className="slider__wrapper" style={wrapperTransform}>
                     <h3 id={headingId} className="visuallyhidden">{heading}</h3>
-                    
                     {slides.map(slide => {
                     return (
                         <AthleteSlide
@@ -99,6 +98,14 @@ export class Slider extends React.Component {
                     })}
                 </ul>
             </div>
+            {slides.map(slide => {
+              return (
+                <div className={`athlete-title__container ${slide.index === this.state.current ? 'block' : 'hidden'}`}>
+                  <p className="text-white pb-2 text-3xl">{slide.name}</p>
+                  <p className="text-white uppercase text-xl">{slide.title}</p>
+                </div>
+              )
+            })}
         </React.Fragment>
       )
     }

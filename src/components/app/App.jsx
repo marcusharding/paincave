@@ -105,24 +105,30 @@ class App extends React.Component {
           </section>
 
           {/** ABOUT */}
-          <section id="about" className="lg:h-screen relative block py-12 lg:py-24">
-            <WhoAreWe/>
+          <section id="about" className="lg:h-screen relative block py-12">
+            <WhoAreWe
+              data={this.state.homepage}
+            />
             {/** About section background */}
             <div style={aboutSectionStyle}></div>
           </section>
 
           {/** SHOP */}
-          <section id="shop" className="lg:h-screen py-12 lg:py-24">
-            <Shop/>
+          <section id="shop" className="lg:h-screen py-12">
+            <Shop
+              data={this.state.homepage}
+            />
           </section>
 
           {/** GYM */}
-          <section id="gym" className="lg:h-screen py-12 lg:py-24">
-            <Gyms/>
+          <section id="gym" className="lg:h-screen py-12">
+            <Gyms
+              data={this.state.homepage}
+            />
           </section>
 
           {/** ATHLETES */}
-          <section id="athletes" className="lg:h-screen relative py-12 lg:py-24">
+          <section id="athletes" className="lg:h-screen relative py-12">
             <Athletes/>
           </section>
         </main>

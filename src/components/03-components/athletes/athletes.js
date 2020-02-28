@@ -7,19 +7,31 @@ import ScrollAnimation from 'react-animate-on-scroll'
 const slideData = [
     {
       index: 0,
-      src: AthleteImg
+      src: AthleteImg,
+      name: 'Marcus Harding',
+      title: 'ceo',
+      bio: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
     },
     {
       index: 1,
-      src: AthleteImg
+      src: AthleteImg,
+      name: 'Chris Graham',
+      title: 'chairman',
+      bio: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
     },
     {
       index: 2,
-      src: AthleteImg
+      src: AthleteImg,
+      name: 'Joe Bloggs',
+      title: 'coach',
+      bio: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.' 
     },
     {
       index: 3,
-      src: AthleteImg
+      src: AthleteImg,
+      name: 'Steve Allen',
+      title: 'Board Director',
+      bio: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
     }
   ]
 
@@ -35,7 +47,7 @@ export class Athletes extends React.Component {
               </div>
             </ScrollAnimation>
             <ScrollAnimation animateIn="fadeIn" animateOnce={true}>
-              <div className="flex justify-center h-full justify-center overflow-x-hidden ml-auto slider__container py-12">
+              <div className="flex flex-col justify-center h-full justify-center overflow-x-hidden ml-auto slider__container py-12">
                 <Slider
                   slides={slideData}
                   heading="Athlete Slider"

@@ -24,6 +24,14 @@ export class WhoAreWe extends React.Component {
 
     render() {
 
+        var aboutHeading
+        var aboutSubHeading
+
+        this.props.data.forEach(element => {
+            aboutHeading = element.acf.about_heading
+            aboutSubHeading = element.acf.about_subhead
+            });
+
         const widget = fakeArray.map((widget) =>
             <ScrollAnimation 
             animateIn="fadeIn"
@@ -40,8 +48,8 @@ export class WhoAreWe extends React.Component {
         return(
             <ScrollAnimation animateIn="fadeIn" animateOnce={true}>
                 <div className="wrapper">
-                    <h1 className="text-offWhite uppercase font-bold text-4xl lg:text-5xl pb-6">Who are we</h1>
-                    <p className="text-white text-xl lg:w-1/2 pb-24">Lorem ipsum dolor sit amet, consetetur Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet, consetetur Lorem ipsum dolor sit amet.</p>
+                    <h1 className="text-offWhite uppercase font-bold text-4xl lg:text-5xl pb-6">{aboutHeading}</h1>
+                    <p className="text-white text-xl lg:w-1/2 pb-24">{aboutSubHeading}</p>
                     
                     <div className="flex flex-col lg:flex-row justify-between">
                         {widget}
