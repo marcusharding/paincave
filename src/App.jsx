@@ -1,18 +1,17 @@
 import React from 'react'
-import { Header } from '../03-components/header/header'
-import { HomepageHero } from '../03-components/homepageHero/homepageHero'
-import { WhoAreWe } from '../03-components/whoAreWe/whoAreWe'
-import { Shop } from '../03-components/shop/shop'
-import { Gyms } from '../03-components/gyms/gyms'
-import { Athletes } from '../03-components/athletes/athletes'
-import { Spinner } from '../04-global/spinner'
-import { SideMenu } from '../04-global/sideMenu/sideMenu'
-import { Footer } from '../04-global/footer'
+import { Header } from './components/03-components/header/header'
+import { HomepageHero } from './components/03-components/homepageHero/homepageHero'
+import { WhoAreWe } from './components/03-components/whoAreWe/whoAreWe'
+import { Shop } from './components/03-components/shop/shop'
+import { Gyms } from './components/03-components/gyms/gyms'
+import { Athletes } from './components/03-components/athletes/athletes'
+import { Spinner } from './components/04-global/spinner'
+import { Footer } from './components/04-global/footer'
 import SmoothScroll from 'smooth-scroll'
 import BackgroundImageOnLoad from 'background-image-on-load'
-import ReadingProgress from '../04-global/ReadingProgress'
-import './app.scss' 
+import ReadingProgress from './components/04-global/ReadingProgress'
 import "animate.css/animate.min.css"
+import './tailwind.css'
 
 
 // Initializing smooth scroll module
