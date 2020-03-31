@@ -96,7 +96,7 @@ class App extends React.Component {
           <ReadingProgress target={target} />
 
           {/** HOMPAGE HERO */}
-          <section id="hero">
+          <section class="">
             <HomepageHero
               data={this.state.homepage}
               state={this.state}

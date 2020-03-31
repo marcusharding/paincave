@@ -18,9 +18,6 @@ export class HomepageHero extends React.Component {
         return (
             <React.Fragment>
                 <div className="w-full h-screen relative overflow-hidden">
-                    {/* <video autoplay loop muted playsinline id="headerVideo" className="headerVideo opacity-25">
-                        <source src={Video} type="video/mp4"/>
-                    </video> */}
                     <img alt="homepage header" className="absolute inset-0 object-cover w-full h-full opacity-15" src={headerImg}></img>
                     <div className="h-full w-full wrapper justify-center flex flex-col items-center">
                         <div className="absolute headerAthlete flex justify-center">
