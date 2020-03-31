@@ -26,8 +26,8 @@ export class HomepageHero extends React.Component {
                             </div>
                         </div>
                         <div className="">
-                            <p className={`uppercase text-offWhite text-3xl lg:text-9xl font-bold text-center ${this.props.state.bgIsLoaded ? 'fade-in-extended': ''}`}><span className="relative herotxt_a">elite</span> <span className="relative herotxt_b">fitness</span></p>
-                            <p className={`uppercase text-primary text-3xl lg:text-9xl font-bold text-center ${this.props.state.bgIsLoaded ? 'fade-in-extended': ''}`}><span className="relative herotxt_c">supreme</span> <span className="relative herotxt_d">strength</span></p>
+                            <p className={`hero-text uppercase text-offWhite text-3xl font-bold text-center ${this.props.state.bgIsLoaded ? 'fade-in-extended': ''}`}><span className="relative herotxt_a">elite</span> <span className="relative herotxt_b">fitness</span></p>
+                            <p className={`hero-text uppercase text-primary text-3xl font-bold text-center ${this.props.state.bgIsLoaded ? 'fade-in-extended': ''}`}><span className="relative herotxt_c">supreme</span> <span className="relative herotxt_d">strength</span></p>
                         </div>
                     </div>
                 </div>
