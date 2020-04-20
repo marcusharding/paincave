@@ -26,8 +26,9 @@ class App extends React.Component {
   // Pulling the data from the wordpress rest api
   componentDidMount() {
     fetch('https://paincave-api.marcusjh.co.uk/wp-json/wp/v2/pages/?slug=homepage')
-    .then(res => res.json())
-    .then((data) => {
+    .then((response) => {
+      return response.json()
+    }).then((data) => {
       this.setState({ homepage: data })
     })
     .catch(console.log)
