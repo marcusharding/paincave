@@ -100,7 +100,7 @@ export class Slider extends React.Component {
             </div>
             {slides.map(slide => {
               return (
-                <div className={`athlete-title__container ${slide.index === this.state.current ? 'block' : 'hidden'}`}>
+                <div key={slide.index} className={`athlete-title__container ${slide.index === this.state.current ? 'block' : 'hidden'}`}>
                   <p className="text-white pb-2 text-3xl">{slide.name}</p>
                   <p className="text-white uppercase text-xl">{slide.title}</p>
                 </div>

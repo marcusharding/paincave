@@ -34,6 +34,7 @@ export class WhoAreWe extends React.Component {
 
         const widget = fakeArray.map((widget) =>
             <ScrollAnimation 
+            key={widget.index}
             animateIn="fadeIn"
             delay={`${widget.index + 6}00`}
             animateOnce={true}

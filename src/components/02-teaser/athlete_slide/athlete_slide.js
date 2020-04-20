@@ -74,11 +74,11 @@ export class AthleteSlide extends React.Component {
               <div className="slide__image-wrapper">
                 <img 
                   className="slide__image"
-                  alt={headline}
+                  alt="athlete"
                   src={src}
                   onLoad={this.imageLoaded}
                 />
-                <button onClick={this.athleteBtnOnClick} className="athleteModalBtn">
+                <button onClick={this.athleteBtnOnClick} className="athleteModalBtn" aria-label="Athlete info button">
                   <span className="athleteModalBtn__cross--a"></span>
                   <span className={`athleteModalBtn__cross--b ${this.state.athleteInfo === true ? 'opacity-0' : ''}`}></span>
                 </button>

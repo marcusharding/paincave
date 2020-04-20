@@ -10,17 +10,17 @@ import ScrollAnimation from 'react-animate-on-scroll'
 export class Shop extends React.Component {
     render() {
 
-        var img1
-        var img2
-        var img3
-        var img4
+        // var img1
+        // var img2
+        // var img3
+        // var img4
 
-        this.props.data.forEach(element => {
-            img1 = element.acf.shop_images.shop_image_1
-            img2 = element.acf.shop_images.shop_image_2
-            img3 = element.acf.shop_images.shop_image_3
-            img4 = element.acf.shop_images.shop_image_4
-            });
+        // this.props.data.forEach(element => {
+        //    const img1 = element.acf.shop_images.shop_image_1
+        //    const img2 = element.acf.shop_images.shop_image_2
+        //    const img3 = element.acf.shop_images.shop_image_3
+        //    const img4 = element.acf.shop_images.shop_image_4
+        //     });
 
         return (
             <Fragment>

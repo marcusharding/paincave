@@ -29,7 +29,7 @@ export class Footer extends React.Component {
                                 </a>
                             </li>
                         </ul>
-                        <p class="text-white montserrat--regular">Site by <a href="https://www.marcusjh.co.uk"><span className="text-extra-bold uppercase montserrat--bold">MarcusJH</span></a></p>
+                        <p className="text-white montserrat--regular">Site by <a href="https://www.marcusjh.co.uk"><span className="text-extra-bold uppercase montserrat--bold">MarcusJH</span></a></p>
                     </div>
                 </div>
             </div>

@@ -73,13 +73,13 @@ class App extends React.Component {
     if((this.state.bgIsLoaded === true)) {
       SpinnerHandler = 'hidden'
       body.classList.remove('fixed', 'w-full')
-    } else {
-      SpinnerHandler = ''
     };
 
     return (  
       <React.Fragment>
 
+        {/* The loading spinner dynamically displayed by the 'SpinnerHandler'
+        variable controlled based on the loading of the athlete image */}
         <div className={SpinnerHandler}>
           <Spinner
           bgState={this.state.bgIsLoaded}
@@ -96,7 +96,7 @@ class App extends React.Component {
           <ReadingProgress target={target} />
 
           {/** HOMPAGE HERO */}
-          <section class="">
+          <section className="">
             <HomepageHero
               data={this.state.homepage}
               state={this.state}
