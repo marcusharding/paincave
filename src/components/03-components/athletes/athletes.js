@@ -47,12 +47,12 @@ export class Athletes extends React.Component {
               </div>
             </ScrollAnimation>
             <ScrollAnimation animateIn="fadeIn" animateOnce={true}>
-              <div className="flex flex-col justify-center h-full justify-center overflow-x-hidden ml-auto slider__container py-12">
+              {/* <div className="slider__container"> */}
                 <Slider
                   slides={slideData}
                   heading="Athlete Slider"
                 />
-              </div>
+              {/* </div> */}
             </ScrollAnimation>
             </React.Fragment>
         )

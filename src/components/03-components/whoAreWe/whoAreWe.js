@@ -1,5 +1,4 @@
 import React from 'react'
-import { Fragment } from 'react'
 import Heart from '../../../assets/svg/heart.svg'
 import KettleBell from '../../../assets/svg/kettlebell.svg'
 import Strong from '../../../assets/svg/strong.svg'

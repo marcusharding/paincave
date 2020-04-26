@@ -60,7 +60,7 @@ export class Slider extends React.Component {
     }
   
     render() {
-      const { current, direction } = this.state
+      const { current } = this.state
       const { slides, heading } = this.props 
       const headingId = `slider-heading__${heading.replace(/\s+/g, '-').toLowerCase()}`
       const wrapperTransform = {
@@ -90,8 +90,9 @@ export class Slider extends React.Component {
                     return (
                         <AthleteSlide
                         key={slide.index}
+                        index={slide.index}
                         slide={slide}
-                        current={current}
+                        current={this.state.current}
                         handleSlideClick={this.handleSlideClick}
                         />
                     )
@@ -100,10 +101,14 @@ export class Slider extends React.Component {
             </div>
             {slides.map(slide => {
               return (
-                <div key={slide.index} className={`athlete-title__container ${slide.index === this.state.current ? 'block' : 'hidden'}`}>
-                  <p className="text-white pb-2 text-3xl">{slide.name}</p>
-                  <p className="text-white uppercase text-xl">{slide.title}</p>
-                </div>
+                <React.Fragment>
+                  {slide.index === this.state.current && 
+                    <div key={slide.index} className={`athlete-title__container ${slide.index === this.state.current ? 'block' : 'hidden'}`}>
+                    <p className="text-white pb-2 text-3xl">{slide.name}</p>
+                    <p className="text-white uppercase text-xl">{slide.title}</p>
+                    </div>
+                  }
+                </React.Fragment>
               )
             })}
         </React.Fragment>

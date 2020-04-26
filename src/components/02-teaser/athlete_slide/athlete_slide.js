@@ -46,7 +46,7 @@ export class AthleteSlide extends React.Component {
       }
       
       render() {
-        const { src, button, headline, index } = this.props.slide
+        const { src, button, index } = this.props.slide
         const current = this.props.current
         let classNames = 'slide'
         
@@ -56,14 +56,26 @@ export class AthleteSlide extends React.Component {
             
         return (
           <React.Fragment>
-            {/* athlete information slide out */}
-            <div className='athlete-info__wrappper'>
-              <div className={`athlete-info__content p-4 ${this.state.athleteInfo === true ? 'active' : ''}`}>
-                <p className="text-white text-3xl pb-2">{this.props.slide.name}</p>
-                <p className="text-white text-2xl pb-2">{this.props.slide.title}</p>
-                <p className="text-white text-lg">{this.props.slide.bio}</p>
-              </div>  
-            </div>
+            {/* athlete information slide out desktop */}
+            {this.props.index === current && 
+              <div className='hidden lg:block athlete-info__wrappper'>
+                <div className={`athlete-info__content p-4 ${this.state.athleteInfo === true ? 'active' : ''}`}>
+                  <p className="text-white text-2xl lg:text-3xl pb-2">{this.props.slide.name}</p>
+                  <p className="text-white text-lg lg:text-2xl pb-2">{this.props.slide.title}</p>
+                  <p className="text-white lg:text-lg">{this.props.slide.bio}</p>
+                </div>  
+              </div>
+            }
+
+            {/* athlete information pop up mobile */}
+            {this.state.athleteInfo === true && this.props.index === current &&
+              <div className="flex flex-col lg:hidden absolute z-50 inset-0 h-screen w-full bg-primary">
+                <p className="text-white text-2xl lg:text-3xl pb-2">{this.props.slide.name}</p>
+                <p className="text-white text-lg lg:text-2xl pb-2">{this.props.slide.title}</p>
+                <p className="text-white lg:text-lg">{this.props.slide.bio}</p>
+              </div>
+            }
+
             <li 
               ref={this.slide}
               className={classNames} 

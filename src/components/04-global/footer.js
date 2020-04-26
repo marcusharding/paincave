@@ -1,5 +1,4 @@
 import React from 'react'
-import { Logo } from '../01-objects/logo'
 
 export class Footer extends React.Component {
     render() {
