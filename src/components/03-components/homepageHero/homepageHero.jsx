@@ -1,7 +1,6 @@
 import React from 'react';
 import '../../../styles/main.scss';
 import './homepageHero.scss';
-import Video from '../../../assets/video/header_video.mp4'
 
 export class HomepageHero extends React.Component {
 
