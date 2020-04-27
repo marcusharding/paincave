@@ -1,34 +1,34 @@
 import React from 'react'
 import { Slider } from '../../04-global/slider/slider'
-import AthleteImg from '../../../assets/img/athlete.jpg'
+// import AthleteImg from '../../../assets/img/athlete.jpg'
 import './athletes.scss'
 import ScrollAnimation from 'react-animate-on-scroll'
 
 const slideData = [
     {
       index: 0,
-      src: AthleteImg,
+      // src: AthleteImg,
       name: 'Marcus Harding',
       title: 'ceo',
       bio: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
     },
     {
       index: 1,
-      src: AthleteImg,
+      // src: AthleteImg,
       name: 'Chris Graham',
       title: 'chairman',
       bio: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
     },
     {
       index: 2,
-      src: AthleteImg,
+      // src: AthleteImg,
       name: 'Joe Bloggs',
       title: 'coach',
       bio: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.' 
     },
     {
       index: 3,
-      src: AthleteImg,
+      // src: AthleteImg,
       name: 'Steve Allen',
       title: 'Board Director',
       bio: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'

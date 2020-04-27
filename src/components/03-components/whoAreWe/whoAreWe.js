@@ -1,21 +1,21 @@
 import React from 'react'
-import Heart from '../../../assets/svg/heart.svg'
-import KettleBell from '../../../assets/svg/kettlebell.svg'
-import Strong from '../../../assets/svg/strong.svg'
+// import Heart from '../../../assets/svg/heart.svg'
+// import KettleBell from '../../../assets/svg/kettlebell.svg'
+// import Strong from '../../../assets/svg/strong.svg'
 import ScrollAnimation from 'react-animate-on-scroll'
 
 const fakeArray = [
     {
         index: 0,
-        img: Heart
+        // img: Heart
     },
     {
         index: 1,
-        img: KettleBell
+        // img: KettleBell
     },
     {
         index: 2,
-        img: Strong
+        // img: Strong
     }
 ]
 

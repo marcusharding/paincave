@@ -1,10 +1,10 @@
 import React from 'react'
 import { Fragment } from 'react'
 import './shop.scss'
-import mainImg from '../../../assets/img/clothing-hero.jpg'
-import leftImg from '../../../assets/img/mainclothes.jpg'
-import bottomRightImg from '../../../assets/img/back.jpg'
-import topRightImg from '../../../assets/img/shorts.jpg'
+// import mainImg from '../../../assets/img/clothing-hero.jpg'
+// import leftImg from '../../../assets/img/mainclothes.jpg'
+// import bottomRightImg from '../../../assets/img/back.jpg'
+// import topRightImg from '../../../assets/img/shorts.jpg'
 import ScrollAnimation from 'react-animate-on-scroll'
 
 export class Shop extends React.Component {
