@@ -6,7 +6,7 @@ export class Footer extends React.Component {
             <div className="footer bg-offBlack w-full h-auto py-6">
                 <div className="header-wrapper">
                     <div className="text-center w-full pb-6">
-                        <a className='navbar-brand uppercase tracking-wider z-10 text-3xl' href="#hero">
+                        <a className='navbar-brand uppercase tracking-wider z-10 text-3xl' href="#hero" target="_blank">
                             <p className="text-offWhite font-bold">pain<span className="text-primary font-bold">cave</span></p>
                             <p className="text-white text-xl">Elite Fitness | Supreme Strength</p>
                         </a>
@@ -14,16 +14,16 @@ export class Footer extends React.Component {
                     <div className="flex flex-row justify-between items-baseline">
                         <ul className="overflow">
                             <li className="md:ml-4 lg:flex-auto">
-                                <a className="g-nav__link text-thin text-white" data-scroll href="#about">
+                                <a className="g-nav__link text-thin text-white" data-scroll href="#about" target="_blank">
                                     About
                                 </a>
-                                <a className="g-nav__link text-thin text-white" data-scroll href="#shop">
+                                <a className="g-nav__link text-thin text-white" data-scroll href="#shop" target="_blank">
                                     Shop
                                 </a>
-                                <a className="g-nav__link text-thin text-white" data-scroll href="#gym">
+                                <a className="g-nav__link text-thin text-white" data-scroll href="#gym" target="_blank">
                                     Gym
                                 </a>
-                                <a className="g-nav__link text-thin text-white" data-scroll href="#athletes">
+                                <a className="g-nav__link text-thin text-white" data-scroll href="#athletes" target="_blank">
                                     Athletes
                                 </a>
                             </li>

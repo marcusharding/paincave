@@ -18,15 +18,13 @@
 
 .slider__controls {
     display: flex;
-    position: absolute;
+    position: relative;
     width: auto;
     top: 0;
-    padding-top: 6rem;
     @media only screen and (min-width: 1024px) {
       justify-content: center;
       align-items: center;
       width: 60%;
-      padding-top: 4rem;
     }
     
     .btn {
@@ -199,3 +197,140 @@
     from { opacity: 0 }
     to   { opacity: 1 }
   }
+
+  .athlete-bio__modal {
+    position: absolute;
+    z-index: 50;
+    display: flex;
+    flex-direction: column;
+    height: 80vh;
+    width: 90%;
+    border-radius: 2%;
+    left: 50%;
+    margin-left: -45%;
+    padding: 2rem;
+  }
+
+  .close__container {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    margin-left: auto;
+    top: -2%;
+    right: 3%;
+    z-index: inherit;
+}
+
+.close {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f7fafc;
+    border-radius: 50%;
+    transition: 200ms ease-in;
+
+    &:hover {
+        background-color: #718096;
+    }
+  }
+  .close:before, .close:after {
+    position: absolute;
+    content: ' ';
+    height: 20px;
+    width: 1px;
+    background-color: #353A50;
+  }
+  .close:before {
+    transform: rotate(45deg);
+  }
+  .close:after {
+    transform: rotate(-45deg);
+  }
+
+// Rodal animations 
+
+  /* -- fade -- */
+@-webkit-keyframes rodal-fade-enter {
+  from {
+    opacity: 0;
+  }
+}
+
+@keyframes rodal-fade-enter {
+  from {
+    opacity: 0;
+  }
+}
+
+.rodal-fade-enter {
+  -webkit-animation: rodal-fade-enter both ease-in;
+  animation: rodal-fade-enter both ease-in;
+}
+
+@-webkit-keyframes rodal-fade-leave {
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes rodal-fade-leave {
+  to {
+    opacity: 0;
+  }
+}
+
+.rodal-fade-leave {
+  -webkit-animation: rodal-fade-leave both ease-out;
+  animation: rodal-fade-leave both ease-out;
+}
+
+/* -- zoom -- */
+@-webkit-keyframes rodal-zoom-enter {
+  from {
+    -webkit-transform: scale3d(0.3, 0.3, 0.3);
+    transform: scale3d(0.3, 0.3, 0.3);
+  }
+}
+
+@keyframes rodal-zoom-enter {
+  from {
+    -webkit-transform: scale3d(0.3, 0.3, 0.3);
+    transform: scale3d(0.3, 0.3, 0.3);
+  }
+}
+
+.rodal-zoom-enter {
+  -webkit-animation: rodal-zoom-enter both cubic-bezier(0.4, 0, 0, 1.5);
+  animation: rodal-zoom-enter both cubic-bezier(0.4, 0, 0, 1.5);
+}
+
+@-webkit-keyframes rodal-zoom-leave {
+  to {
+    -webkit-transform: scale3d(0.3, 0.3, 0.3);
+    transform: scale3d(0.3, 0.3, 0.3);
+  }
+}
+
+@keyframes rodal-zoom-leave {
+  to {
+    -webkit-transform: scale3d(0.3, 0.3, 0.3);
+    transform: scale3d(0.3, 0.3, 0.3);
+  }
+}
+
+.rodal-zoom-leave {
+  -webkit-animation: rodal-zoom-leave both;
+  animation: rodal-zoom-leave both;
+}
+
+.animation-300 {
+  animation-duration: 300ms;
+}

@@ -25,10 +25,14 @@ export class Slider extends React.Component {
     constructor(props) {
       super(props)
       
-      this.state = { current: 0 }
+      this.state = { 
+        current: 0,
+        modalActive: false
+      }
       this.handlePreviousClick = this.handlePreviousClick.bind(this)
       this.handleNextClick = this.handleNextClick.bind(this)
       this.handleSlideClick = this.handleSlideClick.bind(this)
+      this.onModalClick = this.onModalClick.bind(this)
     }
     
     handlePreviousClick() {
@@ -58,6 +62,12 @@ export class Slider extends React.Component {
         })
       }
     }
+
+    onModalClick = () => {
+      this.setState((prevState) => {
+        return { modalActive: !prevState.modalActive };
+      });
+    }
   
     render() {
       const { current } = this.state
@@ -69,6 +79,27 @@ export class Slider extends React.Component {
       
       return (
         <React.Fragment>
+
+        {/* athlete information pop up mobile */}
+        {slides.map(slide => {
+              return (
+                <React.Fragment
+                key={slide.index}
+                >
+                {this.state.modalActive === true && slide.index === this.state.current &&
+                  <div className={`lg:hidden athlete-bio__modal bg-primary ${this.state.modalActive === true ? 'rodal-zoom-enter animation-300' : 'rodal-zoom-leave animation-300'}`}>
+                    <div className="close__container">
+                      <button onClick={this.onModalClick} className="close"></button>
+                    </div>
+                    <p className="text-white text-2xl lg:text-3xl pb-2">{slide.name}</p>
+                    <p className="text-white text-lg lg:text-2xl pb-2">{slide.title}</p>
+                    <p className="text-white lg:text-lg">{slide.bio}</p>
+                  </div>
+                }
+                </React.Fragment>
+              )
+            })}
+
             <div className="slider__controls">
                 <SliderControl 
                 type="previous"
@@ -83,7 +114,7 @@ export class Slider extends React.Component {
                 />
             </div>
 
-            <div className='slider mb-4' aria-labelledby={headingId}>
+            <div className='slider mb-4 wrapper' aria-labelledby={headingId}>
                 <ul className="slider__wrapper" style={wrapperTransform}>
                     <h3 id={headingId} className="visuallyhidden">{heading}</h3>
                     {slides.map(slide => {
@@ -94,16 +125,21 @@ export class Slider extends React.Component {
                         slide={slide}
                         current={this.state.current}
                         handleSlideClick={this.handleSlideClick}
+                        onModalClick={this.onModalClick}
+                        modalActive={this.state.modalActive}
                         />
                     )
                     })}
                 </ul>
             </div>
+            
             {slides.map(slide => {
               return (
-                <React.Fragment>
+                <React.Fragment
+                key={slide.index}
+                >
                   {slide.index === this.state.current && 
-                    <div key={slide.index} className={`athlete-title__container ${slide.index === this.state.current ? 'block' : 'hidden'}`}>
+                    <div className={`athlete-title__container wrapper ${slide.index === this.state.current ? 'block' : 'hidden'}`}>
                     <p className="text-white pb-2 text-3xl">{slide.name}</p>
                     <p className="text-white uppercase text-xl">{slide.title}</p>
                     </div>
