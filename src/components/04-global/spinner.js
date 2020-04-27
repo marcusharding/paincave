@@ -6,7 +6,7 @@ export class Spinner extends React.Component {
 
         return(
             <div className="spinnerContainer">
-                <img alt="" className="spinner" src={require('../../spinner.gif')}/>
+                {/* <img alt="" className="spinner" src={require('../../spinner.gif')}/> */}
             </div>
         );
     }

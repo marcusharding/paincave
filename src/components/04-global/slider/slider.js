@@ -100,7 +100,7 @@ export class Slider extends React.Component {
               )
             })}
 
-            <div className="slider__controls">
+            <div className="slider__controls wrapper">
                 <SliderControl 
                 type="previous"
                 title="Go to previous slide"

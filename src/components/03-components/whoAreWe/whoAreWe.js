@@ -39,7 +39,7 @@ export class WhoAreWe extends React.Component {
             animateOnce={true}
             >
                 <div className="flex flex-col items-center">
-                    <img alt="" className="w-1/3" src={widget.img}></img>
+                    {/* <img alt="" className="w-1/3" src={widget.img}></img> */}
                     <p className="text-white mb-6 lg:mb-0 lg:text-center pt-12 lg:w-3/4">Lorem ipsum dolor sit amet, consetetur Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet, consetetur Lorem ipsum dolor sit amet.</p>
                 </div> 
             </ScrollAnimation>
