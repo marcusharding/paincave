@@ -67,12 +67,12 @@ export class AthleteSlide extends React.Component {
               onMouseLeave={this.handleMouseLeave}
             >
               <div className="slide__image-wrapper">
-                {/* <img 
+                <img 
                   className="slide__image"
                   alt="athlete"
                   src={src}
                   onLoad={this.imageLoaded}
-                /> */}
+                />
                 <button onClick={this.props.onModalClick} className="athleteModalBtn" aria-label="Athlete info button">
                   <span className="athleteModalBtn__cross--a"></span>
                   <span className={`athleteModalBtn__cross--b ${this.props.modalActive === true ? 'opacity-0' : ''}`}></span>

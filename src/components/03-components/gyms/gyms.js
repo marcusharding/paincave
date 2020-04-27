@@ -1,9 +1,9 @@
 import React from 'react'
 import './gyms.scss'
-// import Img1 from '../../../assets/img/img1.jpg'
-// import Img2 from '../../../assets/img/img2.jpg'
-// import Img3 from '../../../assets/img/img3.jpg'
-// import Img4 from '../../../assets/img/img4.jpg'
+import Img1 from '../../../assets/img/img1.jpg'
+import Img2 from '../../../assets/img/img2.jpg'
+import Img3 from '../../../assets/img/img3.jpg'
+import Img4 from '../../../assets/img/img4.jpg'
 import ScrollAnimation from 'react-animate-on-scroll'
 
 
@@ -18,28 +18,28 @@ export class Gyms extends React.Component {
                 <ScrollAnimation animateIn="fadeIn" animateOnce={true}>
                     <div className="flex flex-wrap">
                         <div className="w-1/2 lg:w-1/4 responsive-img gym__container">
-                            {/* <img alt="" className="" src={Img1}></img> */}
+                            <img alt="" className="" src={Img1}></img>
                             <div className="gym__overlay--a">
                                 <p className="text-white font-bold text-xl">London</p>
                                 <p className="text-white italic ">England</p>
                             </div>
                         </div>
                         <div className="w-1/2 lg:w-1/4 responsive-img gym__container">
-                            {/* <img alt="" className="" src={Img2}></img> */}
+                            <img alt="" className="" src={Img2}></img>
                             <div className="gym__overlay--b">
                                 <p className="text-white font-bold text-xl">Tokyo</p>
                                 <p className="text-white italic ">Japan</p>
                             </div>
                         </div>
                         <div className="w-1/2 lg:w-1/4 responsive-img gym__container">
-                            {/* <img alt="" className="" src={Img3}></img> */}
+                            <img alt="" className="" src={Img3}></img>
                             <div className="gym__overlay--c">
                                 <p className="text-white font-bold text-xl">Chicago</p>
                                 <p className="text-white italic ">Illinois</p>
                             </div>
                         </div>
                         <div className="w-1/2 lg:w-1/4 responsive-img gym__container">
-                            {/* <img alt="" className="" src={Img4}></img> */}
+                            <img alt="" className="" src={Img4}></img>
                             <div className="gym__overlay--d">
                                 <p className="text-white font-bold text-xl">New York</p>
                                 <p className="text-white italic ">Usa</p>
