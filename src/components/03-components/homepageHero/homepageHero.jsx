@@ -24,10 +24,8 @@ export class HomepageHero extends React.Component {
                                 <img className={`lg:z-10 ${this.props.state.bgIsLoaded ? 'fade-in': null}`} alt="" src={athleteImg}></img>
                             </div>
                         </div>
-                        <div className="">
                             <p className={`hero-text uppercase text-offWhite font-bold text-center ${this.props.state.bgIsLoaded ? 'fade-in-extended': ''}`}><span className="relative herotxt_a">elite</span> <span className="relative herotxt_b">fitness</span></p>
                             <p className={`hero-text uppercase text-primary font-bold text-center ${this.props.state.bgIsLoaded ? 'fade-in-extended': ''}`}><span className="relative herotxt_c">supreme</span> <span className="relative herotxt_d">strength</span></p>
-                        </div>
                     </div>
                 </div>
             </React.Fragment>
