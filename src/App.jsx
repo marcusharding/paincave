@@ -87,9 +87,9 @@ class App extends React.Component {
          </div>
 
          {/** HEADER */}
-         {/* <Header
+         <Header
           bgState={this.state.bgIsLoaded}
-         /> */}
+         />
 
          <main id="main" className="app" ref={target}>
 
