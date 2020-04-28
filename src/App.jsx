@@ -104,33 +104,33 @@ class App extends React.Component {
            </section>
 
            {/** ABOUT */}
-           <section id="about" className="lg:h-screen relative block py-12">
+           {/* <section id="about" className="lg:h-screen relative block py-12">
              <WhoAreWe
               data={this.state.homepage}
-            />
+            /> */}
             {/* * About section background */}
-            <div style={aboutSectionStyle}></div>
-          </section>
+            {/* <div style={aboutSectionStyle}></div>
+          </section> */}
 
            {/** SHOP */}
-           <section id="shop" className="lg:h-screen py-12">
-             <Shop
-               data={this.state.homepage}
+           {/* <section id="shop" className="lg:h-screen py-12">
+             <Shop */}
+               {/* data={this.state.homepage}
              />
-           </section>
+           </section> */}
 
            {/** GYM */}
-           <section id="gym" className="lg:h-screen py-12">
+           {/* <section id="gym" className="lg:h-screen py-12">
              <Gyms
                data={this.state.homepage}
              />
-           </section>
+           </section> */}
 
            {/** ATHLETES */}
-           <section id="athletes" className="lg:h-screen relative py-12">
+           {/* <section id="athletes" className="lg:h-screen relative py-12">
              <Athletes/>
            </section>
-         </main>
+         </main> */}
 
          <Footer/>
 
@@ -142,7 +142,8 @@ class App extends React.Component {
                bgIsLoaded: true
              })}
            /> */}
-      </React.Fragment>
+           </main>
+           </React.Fragment>
     );
   }
 }
