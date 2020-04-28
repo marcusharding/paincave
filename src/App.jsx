@@ -135,14 +135,14 @@ class App extends React.Component {
          <Footer/>
 
          {/* Using the import to set a src image to be checked for load | adjusting state once loaded */}
-         <BackgroundImageOnLoad
+         {/* <BackgroundImageOnLoad
              src={athleteImg}
              onLoadBg={() =>
                this.setState({
                bgIsLoaded: true
              })}
            />
-           </React.Fragment>
+           </React.Fragment> */}
     );
   }
 }
