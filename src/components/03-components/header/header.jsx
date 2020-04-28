@@ -42,7 +42,7 @@ export class Header extends React.Component {
     }
     render() {
         if(this.state.theposition > 0.05){
-            var headerScroll = true
+            let headerScroll = true
         } else {
             headerScroll = false;
         }

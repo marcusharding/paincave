@@ -23,8 +23,8 @@ export class WhoAreWe extends React.Component {
 
     render() {
 
-        var aboutHeading
-        var aboutSubHeading
+        let aboutHeading = ''
+        let aboutSubHeading = ''
 
         this.props.data.forEach(element => {
             aboutHeading = element.acf.about_heading

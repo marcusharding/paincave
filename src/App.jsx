@@ -15,7 +15,7 @@ import './tailwind.css'
 
 
 // Initializing smooth scroll module
-var scroll = new SmoothScroll('a[href*="#"]');
+let scroll = new SmoothScroll('a[href*="#"]');
 
 
 class App extends React.Component {
@@ -50,7 +50,7 @@ class App extends React.Component {
     });
 
     // Setting about section bg styling
-    var aboutSectionStyle = {
+    let aboutSectionStyle = {
       backgroundImage: `url(${aboutBg})`,
       backgroundRepeat: 'no-repeat',
       backgroundSize: 'contain',
@@ -64,7 +64,7 @@ class App extends React.Component {
     }
 
     // creating a variable which will be dynamically changed to show or hide the spinner
-    var SpinnerHandler = '';
+    let SpinnerHandler = '';
 
     // Controlling body based on state
     const body = document.getElementById('root')
