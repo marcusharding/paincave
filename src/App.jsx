@@ -77,74 +77,73 @@ class App extends React.Component {
     };
 
     return (  
-      // <React.Fragment>
+      <React.Fragment>
+         {/* The loading spinner dynamically displayed by the 'SpinnerHandler'
+         variable controlled based on the loading of the athlete image */}
+         <div className={SpinnerHandler}>
+           <Spinner
+           bgState={this.state.bgIsLoaded}
+           />
+         </div>
 
-      //   {/* The loading spinner dynamically displayed by the 'SpinnerHandler'
-      //   variable controlled based on the loading of the athlete image */}
-      //   <div className={SpinnerHandler}>
-      //     <Spinner
-      //     bgState={this.state.bgIsLoaded}
-      //     />
-      //   </div>
+         {/** HEADER */}
+         <Header
+          bgState={this.state.bgIsLoaded}
+         />
 
-      //   {/** HEADER */}
-      //   <Header
-      //    bgState={this.state.bgIsLoaded}
-      //   />
+         <main id="main" className="app" ref={target}>
 
-      //   <main id="main" className="app" ref={target}>
+           <ReadingProgress target={target} />
 
-      //     <ReadingProgress target={target} />
+           {/** HOMPAGE HERO */}
+           <section className="">
+             <HomepageHero
+               data={this.state.homepage}
+               state={this.state}
+              />
+           </section>
 
-      //     {/** HOMPAGE HERO */}
-      //     <section className="">
-      //       <HomepageHero
-      //         data={this.state.homepage}
-      //         state={this.state}
-      //        />
-      //     </section>
+           {/** ABOUT */}
+           {/* <section id="about" className="lg:h-screen relative block py-12">
+             <WhoAreWe
+              data={this.state.homepage}
+            /> */}
+            {/* * About section background */}
+            {/* <div style={aboutSectionStyle}></div>
+          </section> */}
 
-      //     {/** ABOUT */}
-      //     <section id="about" className="lg:h-screen relative block py-12">
-      //       <WhoAreWe
-      //         data={this.state.homepage}
-      //       />
-      //       {/** About section background */}
-      //       <div style={aboutSectionStyle}></div>
-      //     </section>
+           {/** SHOP */}
+           {/* <section id="shop" className="lg:h-screen py-12">
+             <Shop */}
+               {/* data={this.state.homepage}
+             />
+           </section> */}
 
-      //     {/** SHOP */}
-      //     <section id="shop" className="lg:h-screen py-12">
-      //       <Shop
-      //         data={this.state.homepage}
-      //       />
-      //     </section>
+           {/** GYM */}
+           {/* <section id="gym" className="lg:h-screen py-12">
+             <Gyms
+               data={this.state.homepage}
+             />
+           </section> */}
 
-      //     {/** GYM */}
-      //     <section id="gym" className="lg:h-screen py-12">
-      //       <Gyms
-      //         data={this.state.homepage}
-      //       />
-      //     </section>
+           {/** ATHLETES */}
+           {/* <section id="athletes" className="lg:h-screen relative py-12">
+             <Athletes/>
+           </section>
+         </main> */}
 
-      //     {/** ATHLETES */}
-      //     <section id="athletes" className="lg:h-screen relative py-12">
-      //       <Athletes/>
-      //     </section>
-      //   </main>
+         <Footer/>
 
-      //   <Footer/>
-
-      //   {/* Using the import to set a src image to be checked for load | adjusting state once loaded */}
-      //   <BackgroundImageOnLoad
-      //       src={athleteImg}
-      //       onLoadBg={() =>
-      //         this.setState({
-      //         bgIsLoaded: true
-      //       })}
-      //     />
-      // </React.Fragment>
-      <div></div>
+         {/* Using the import to set a src image to be checked for load | adjusting state once loaded */}
+         <BackgroundImageOnLoad
+             src={athleteImg}
+             onLoadBg={() =>
+               this.setState({
+               bgIsLoaded: true
+             })}
+           />
+           </main>
+           </React.Fragment>
     );
   }
 }
