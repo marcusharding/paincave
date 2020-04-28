@@ -127,9 +127,9 @@ class App extends React.Component {
            </section>
 
            {/** ATHLETES */}
-           {/* <section id="athletes" className="lg:h-screen relative py-12">
+           <section id="athletes" className="lg:h-screen relative py-12">
              <Athletes/>
-           </section> */}
+           </section>
          </main>
 
          <Footer/>
