@@ -93,7 +93,7 @@ class App extends React.Component {
 
          <main id="main" className="app" ref={target}>
 
-           {/* <ReadingProgress target={target} /> */}
+           <ReadingProgress target={target} />
 
            {/** HOMPAGE HERO */}
            {/* <section className="">
