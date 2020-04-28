@@ -104,13 +104,13 @@ class App extends React.Component {
            </section>
 
            {/** ABOUT */}
-           {/* <section id="about" className="lg:h-screen relative block py-12">
+           <section id="about" className="lg:h-screen relative block py-12">
              <WhoAreWe
               data={this.state.homepage}
-            /> */}
+            />
             {/* * About section background */}
-            {/* <div style={aboutSectionStyle}></div>
-          </section> */}
+            <div style={aboutSectionStyle}></div>
+          </section>
 
            {/** SHOP */}
            {/* <section id="shop" className="lg:h-screen py-12">
