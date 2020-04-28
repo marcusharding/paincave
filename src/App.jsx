@@ -40,8 +40,8 @@ class App extends React.Component {
     const target = React.createRef();
 
     // Setting api variables for use 
-    var athleteImg = null
-    var aboutBg = null
+    var athleteImg = ''
+    var aboutBg = ''
 
     console.log(athleteImg)
 
