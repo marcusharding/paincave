@@ -40,8 +40,10 @@ class App extends React.Component {
     const target = React.createRef();
 
     // Setting api variables for use 
-    var athleteImg
-    var aboutBg
+    var athleteImg = null
+    var aboutBg = null
+
+    console.log(athleteImg)
 
     // Looping over homepage api and grabbing acf field to store in variable
     this.state.homepage.forEach(element => {
@@ -109,7 +111,7 @@ class App extends React.Component {
               data={this.state.homepage}
             />
             {/* * About section background */}
-            {/* <div style={aboutSectionStyle}></div> */}
+            <div style={aboutSectionStyle}></div>
           </section>
 
            {/** SHOP */}
