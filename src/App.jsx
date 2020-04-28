@@ -129,8 +129,8 @@ class App extends React.Component {
            {/** ATHLETES */}
            {/* <section id="athletes" className="lg:h-screen relative py-12">
              <Athletes/>
-           </section>
-         </main> */}
+           </section> */}
+         </main>
 
          <Footer/>
 
@@ -142,7 +142,6 @@ class App extends React.Component {
                bgIsLoaded: true
              })}
            /> */}
-           </main>
            </React.Fragment>
     );
   }
