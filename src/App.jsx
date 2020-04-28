@@ -142,7 +142,6 @@ class App extends React.Component {
               this.setState({
               bgIsLoaded: true
             })}
-            onError={err => console.log('error', err)}
           />
       </React.Fragment>
     );
