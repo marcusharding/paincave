@@ -120,16 +120,16 @@ class App extends React.Component {
            </section>
 
            {/** GYM */}
-           <section id="gym" className="lg:h-screen py-12">
+           {/* <section id="gym" className="lg:h-screen py-12">
              <Gyms
                data={this.state.homepage}
              />
-           </section>
+           </section> */}
 
            {/** ATHLETES */}
-           <section id="athletes" className="lg:h-screen relative py-12">
+           {/* <section id="athletes" className="lg:h-screen relative py-12">
              <Athletes/>
-           </section>
+           </section> */}
          </main>
 
          <Footer/>
@@ -141,8 +141,8 @@ class App extends React.Component {
                this.setState({
                bgIsLoaded: true
              })}
-           />
-           </React.Fragment> */}
+           /> */}
+           </React.Fragment>
     );
   }
 }
