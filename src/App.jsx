@@ -80,11 +80,11 @@ class App extends React.Component {
       <React.Fragment>
          {/* The loading spinner dynamically displayed by the 'SpinnerHandler'
          variable controlled based on the loading of the athlete image */}
-         {/* <div className={SpinnerHandler}>
+         <div className={SpinnerHandler}>
            <Spinner
            bgState={this.state.bgIsLoaded}
            />
-         </div> */}
+         </div>
 
          {/** HEADER */}
          {/* <Header
