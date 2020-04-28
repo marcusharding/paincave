@@ -109,7 +109,7 @@ class App extends React.Component {
               data={this.state.homepage}
             />
             {/* * About section background */}
-            <div style={aboutSectionStyle}></div>
+            {/* <div style={aboutSectionStyle}></div> */}
           </section>
 
            {/** SHOP */}
