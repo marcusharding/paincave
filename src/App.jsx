@@ -80,20 +80,20 @@ class App extends React.Component {
       <React.Fragment>
          {/* The loading spinner dynamically displayed by the 'SpinnerHandler'
          variable controlled based on the loading of the athlete image */}
-         <div className={SpinnerHandler}>
+         {/* <div className={SpinnerHandler}>
            <Spinner
            bgState={this.state.bgIsLoaded}
            />
-         </div>
+         </div> */}
 
          {/** HEADER */}
-         <Header
+         {/* <Header
           bgState={this.state.bgIsLoaded}
-         />
+         /> */}
 
          <main id="main" className="app" ref={target}>
 
-           <ReadingProgress target={target} />
+           {/* <ReadingProgress target={target} /> */}
 
            {/** HOMPAGE HERO */}
            {/* <section className="">
@@ -132,16 +132,16 @@ class App extends React.Component {
            </section>
          </main> */}
 
-         <Footer/>
+         {/* <Footer/> */}
 
          {/* Using the import to set a src image to be checked for load | adjusting state once loaded */}
-         <BackgroundImageOnLoad
+         {/* <BackgroundImageOnLoad
              src={athleteImg}
              onLoadBg={() =>
                this.setState({
                bgIsLoaded: true
              })}
-           />
+           /> */}
            </main>
            </React.Fragment>
     );
