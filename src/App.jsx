@@ -36,45 +36,45 @@ class App extends React.Component {
 
   render () {
 
-    // // Setting 
-    // const target = React.createRef();
+    // Setting 
+    const target = React.createRef();
 
-    // // Setting api variables for use 
-    // var athleteImg
-    // var aboutBg
+    // Setting api variables for use 
+    var athleteImg
+    var aboutBg
 
-    // // Looping over homepage api and grabbing acf field to store in variable
-    // this.state.homepage.forEach(element => {
-    // athleteImg = element.acf.athlete_img
-    // aboutBg = element.acf.about_bg
-    // });
+    // Looping over homepage api and grabbing acf field to store in variable
+    this.state.homepage.forEach(element => {
+    athleteImg = element.acf.athlete_img
+    aboutBg = element.acf.about_bg
+    });
 
-    // // Setting about section bg styling
-    // var aboutSectionStyle = {
-    //   backgroundImage: `url(${aboutBg})`,
-    //   backgroundRepeat: 'no-repeat',
-    //   backgroundSize: 'contain',
-    //   opacity: '0.3',
-    //   top: 0,
-    //   left: 0,
-    //   bottom: 0,
-    //   right: 0,
-    //   position: 'absolute',
-    //   zIndex: -1 
-    // }
+    // Setting about section bg styling
+    var aboutSectionStyle = {
+      backgroundImage: `url(${aboutBg})`,
+      backgroundRepeat: 'no-repeat',
+      backgroundSize: 'contain',
+      opacity: '0.3',
+      top: 0,
+      left: 0,
+      bottom: 0,
+      right: 0,
+      position: 'absolute',
+      zIndex: -1 
+    }
 
-    // // creating a variable which will be dynamically changed to show or hide the spinner
-    // var SpinnerHandler = '';
+    // creating a variable which will be dynamically changed to show or hide the spinner
+    var SpinnerHandler = '';
 
-    // // Controlling body based on state
-    // const body = document.getElementById('root')
-    // body.classList.add('fixed', 'w-full')
+    // Controlling body based on state
+    const body = document.getElementById('root')
+    body.classList.add('fixed', 'w-full')
 
-    // // conditional statement to check wether the state has been updated from the image load
-    // if((this.state.bgIsLoaded === true)) {
-    //   SpinnerHandler = 'hidden'
-    //   body.classList.remove('fixed', 'w-full')
-    // };
+    // conditional statement to check wether the state has been updated from the image load
+    if((this.state.bgIsLoaded === true)) {
+      SpinnerHandler = 'hidden'
+      body.classList.remove('fixed', 'w-full')
+    };
 
     return (  
       // <React.Fragment>
