@@ -40,8 +40,8 @@ class App extends React.Component {
     const target = React.createRef();
 
     // Setting api variables for use 
-    let athleteImg = ''
-    let aboutBg = ''
+    var athleteImg 
+    var aboutBg 
 
     // Looping over homepage api and grabbing acf field to store in variable
     this.state.homepage.forEach(element => {
