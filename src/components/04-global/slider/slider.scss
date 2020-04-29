@@ -202,12 +202,13 @@
     z-index: 50;
     display: flex;
     flex-direction: column;
-    height: 80vh;
+    height: 50vh;
     width: 90%;
     border-radius: 2%;
     left: 50%;
     margin-left: -45%;
     padding: 2rem;
+    overflow: auto;
   }
 
   .close__container {
@@ -219,9 +220,10 @@
     align-items: center;
     border-radius: 50%;
     margin-left: auto;
-    top: -2%;
-    right: 3%;
+    top: 0;
+    right: 0;
     z-index: inherit;
+    margin: 10px;
 }
 
 .close {

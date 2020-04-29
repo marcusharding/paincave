@@ -42,7 +42,7 @@ export class Athletes extends React.Component {
         return(
             <React.Fragment>
             <ScrollAnimation animateIn="fadeIn" animateOnce={true}>
-              <div className="wrapper flex items-center">
+              <div style={this.props.modalActive === true ? this.props.modalActiveStyle : null} className="wrapper flex items-center">
                 <h1 className="text-offWhite uppercase font-bold text-3xl lg:text-5xl pb-12 lg:pb-0">Meet Our Athletes</h1>
               </div>
             </ScrollAnimation>
@@ -50,6 +50,9 @@ export class Athletes extends React.Component {
                 <Slider
                   slides={slideData}
                   heading="Athlete Slider"
+                  modalActive={this.props.modalActive}
+                  onModalClick={this.props.onModalClick}
+                  modalActiveStyle={this.props.modalActiveStyle}
                 />
             </ScrollAnimation>
             </React.Fragment>

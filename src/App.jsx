@@ -19,10 +19,18 @@ let scroll = new SmoothScroll('a[href*="#"]');
 
 
 class App extends React.Component {
-  state = {
+
+  constructor(props) {
+    super(props)
+    
+    this.state = {
     homepage: [],
-    bgIsLoaded: false
+    bgIsLoaded: false,
+    modalActive: false
   }
+    this.onModalClick = this.onModalClick.bind(this)
+  }
+
   // Pulling the data from the wordpress rest api
   componentDidMount() {
     fetch('https://paincave-api.marcusjh.co.uk/wp-json/wp/v2/pages/?slug=homepage')
@@ -32,6 +40,20 @@ class App extends React.Component {
       this.setState({ homepage: data })
     })
     .catch(console.log)
+  }
+
+
+  // Changing modalActive state onClick
+  onModalClick = () => {
+    this.setState((prevState) => {
+      return { modalActive: !prevState.modalActive };
+    });
+
+    document.body.style.overflow = 'hidden';
+
+    if(this.state.modalActive === true){
+      document.body.style.overflow = 'unset';
+    }
   }
 
   render () {
@@ -61,6 +83,10 @@ class App extends React.Component {
       right: 0,
       position: 'absolute',
       zIndex: -1 
+    }
+
+    const modalActiveStyle = {
+      filter: `blur(10px)`
     }
 
     // creating a variable which will be dynamically changed to show or hide the spinner
@@ -120,7 +146,7 @@ class App extends React.Component {
            </section>
 
            {/** GYM */}
-           <section id="gym" className="lg:h-screen py-12">
+           <section style={this.state.modalActive === true ? modalActiveStyle : null} id="gym" className="lg:h-screen py-12">
              <Gyms
                data={this.state.homepage}
              />
@@ -128,11 +154,17 @@ class App extends React.Component {
 
            {/** ATHLETES */}
            <section id="athletes" className="lg:h-screen relative py-12">
-             <Athletes/>
+             <Athletes
+               modalActive={this.state.modalActive}
+               onModalClick={this.onModalClick}
+               modalActiveStyle={modalActiveStyle}
+             />
            </section>
          </main>
 
+        <div style={this.state.modalActive === true ? modalActiveStyle : null}>
          <Footer/>
+        </div>
 
          {/* Using the import to set a src image to be checked for load | adjusting state once loaded */}
          <BackgroundImageOnLoad
