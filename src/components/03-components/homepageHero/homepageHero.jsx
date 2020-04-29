@@ -6,8 +6,8 @@ export class HomepageHero extends React.Component {
 
   render() {
 
-        let headerImg 
-        let athleteImg 
+        let headerImg = ''
+        let athleteImg = ''
 
         this.props.data.forEach(element => {
         headerImg = element.acf.header_image
