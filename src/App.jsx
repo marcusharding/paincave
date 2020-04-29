@@ -122,12 +122,10 @@ class App extends React.Component {
            <ReadingProgress target={target} />
 
            {/** HOMPAGE HERO */}
-           <section className="">
              <HomepageHero
                data={this.state.homepage}
                state={this.state}
               />
-           </section>
 
            {/** ABOUT */}
            <section id="about" className="lg:h-screen relative block py-12">

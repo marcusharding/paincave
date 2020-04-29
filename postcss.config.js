@@ -5,7 +5,7 @@ const purgecss = require('@fullhuman/postcss-purgecss')({
     './public/index.html'
   ],
   css: ['./src/tailwind.css'],
-  whitelist: ['justify-center', 'h-screen', 'lg:h-screen', 'lg:z-10'],
+  whitelist: ['justify-center', 'h-screen', 'lg:h-screen', 'lg:z-10', 'py-12'],
   // Include any special characters you're using in this regular expression
   defaultExtractor: content => content.match(/[A-Za-z0-9-_:/]+/g) || []
 })
