@@ -35,6 +35,13 @@
       }
     }
 
+    .hamburger-inner {
+      width: 80%;
+      &::after {
+        width: 100%;
+      }
+    }
+
     .hamburger-inner,
     .hamburger-inner::before,
     .hamburger-inner::after {

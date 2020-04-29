@@ -60,12 +60,12 @@ export class Header extends React.Component {
                         />
                         {/* Include nav */}
                         <Nav
-                        state = {this.state}
+                        state={this.state}
                         />
                         {/* Include burger */}
                         <Burger
-                        toggleClass = {this.toggleClass}
-                        state = {this.state}
+                        toggleClass={this.toggleClass}
+                        state={this.state}
                         bgState={this.props.bgState}
                         />
                     </div>
