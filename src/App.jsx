@@ -177,7 +177,7 @@ class App extends React.Component {
            </section>
 
            {/** ATHLETES */}
-           <section id="athletes" className="lg:h-screen relative py-12 lg:py-0">
+           <section id="athletes" className="lg:h-screen relative mb-12 py-12 lg:py-0">
              <Athletes
                mobileModalActive={this.state.mobileModalActive}
                onMobileModalClick={this.onMobileModalClick}
