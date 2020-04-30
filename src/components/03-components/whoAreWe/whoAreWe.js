@@ -7,15 +7,18 @@ import ScrollAnimation from 'react-animate-on-scroll'
 const fakeArray = [
     {
         index: 0,
-        img: Heart
+        img: Heart,
+        txt: 'Exceptional conditioning is the foundation to each and every one of us'
     },
     {
         index: 1,
-        img: KettleBell
+        img: KettleBell,
+        txt: 'Fluid and functional movement ensures we stay safe and ready for anything'
     },
     {
         index: 2,
-        img: Strong
+        img: Strong,
+        txt: 'Unrivaled strength is the last component that seperates us from the rest'
     }
 ]
 
@@ -38,9 +41,9 @@ export class WhoAreWe extends React.Component {
             delay={`${widget.index + 6}00`}
             animateOnce={true}
             >
-                <div className="flex flex-col items-center">
-                    <img alt="" className="w-1/3" src={widget.img}></img>
-                    <p className="text-white mb-6 lg:mb-0 lg:text-center pt-12 lg:w-3/4">Lorem ipsum dolor sit amet, consetetur Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet, consetetur Lorem ipsum dolor sit amet.</p>
+                <div className="flex flex-col items-center pb-12 lg:pb-0">
+                    <img alt="" className="w-1/3 lg:w-1/2 pb-6" src={widget.img}></img>
+                    <p className="text-white lg:mb-0 text-center lg:w-3/4">{widget.txt}</p>
                 </div> 
             </ScrollAnimation>
         )
@@ -49,7 +52,7 @@ export class WhoAreWe extends React.Component {
             <ScrollAnimation animateIn="fadeIn" animateOnce={true}>
                 <div className="wrapper">
                     <h1 className="text-offWhite uppercase font-bold text-4xl lg:text-5xl pb-6">{aboutHeading}</h1>
-                    <p className="text-white text-xl lg:w-1/2 pb-24">{aboutSubHeading}</p>
+                    <p className="text-white lg:text-xl lg:w-3/4 pb-12 lg:pb-24">{aboutSubHeading}</p>
                     
                     <div className="flex flex-col lg:flex-row justify-between">
                         {widget}

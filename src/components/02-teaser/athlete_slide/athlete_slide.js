@@ -51,7 +51,7 @@ export class AthleteSlide extends React.Component {
             {/* athlete information slide out desktop */}
             {this.props.index === current && 
               <div className='hidden lg:block athlete-info__wrappper'>
-                <div className={`athlete-info__content p-4 ${this.props.modalActive === true ? 'active' : ''}`}>
+                <div className={`athlete-info__content p-4 ${this.props.desktopModalActive === true ? 'active' : ''}`}>
                   <p className="text-white text-2xl lg:text-3xl pb-2">{this.props.slide.name}</p>
                   <p className="text-white text-lg lg:text-2xl pb-2">{this.props.slide.title}</p>
                   <p className="text-white lg:text-lg">{this.props.slide.bio}</p>
@@ -73,9 +73,17 @@ export class AthleteSlide extends React.Component {
                   src={src}
                   onLoad={this.imageLoaded}
                 />
-                <button onClick={this.props.onModalClick} className="athleteModalBtn" aria-label="Athlete info button">
+
+                {/* desktop button */}
+                <button onClick={this.props.onDesktopModalClick} className="hidden lg:flex athleteModalBtn" aria-label="Athlete info button">
                   <span className="athleteModalBtn__cross--a"></span>
-                  <span className={`athleteModalBtn__cross--b ${this.props.modalActive === true ? 'opacity-0' : ''}`}></span>
+                  <span className={`athleteModalBtn__cross--b ${this.props.desktopModalActive === true ? 'opacity-0' : ''}`}></span>
+                </button>
+
+                {/* mobile button */}
+                <button onClick={this.props.onMobileModalClick} className="lg:hidden athleteModalBtn" aria-label="Athlete info button">
+                  <span className="athleteModalBtn__cross--a"></span>
+                  <span className={`athleteModalBtn__cross--b ${this.props.mobileModalActive === true ? 'opacity-0' : ''}`}></span>
                 </button>
               </div>
             </li>

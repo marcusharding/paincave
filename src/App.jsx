@@ -12,6 +12,7 @@ import BackgroundImageOnLoad from 'background-image-on-load'
 import ReadingProgress from './components/04-global/ReadingProgress'
 import "animate.css/animate.min.css"
 import './tailwind.css'
+import gymBg from './assets/img/rope.jpg'
 
 
 // Initializing smooth scroll module
@@ -26,9 +27,12 @@ class App extends React.Component {
     this.state = {
     homepage: [],
     bgIsLoaded: false,
-    modalActive: false
+    mobileModalActive: false,
+    desktopModalActive: false
   }
-    this.onModalClick = this.onModalClick.bind(this)
+ 
+    this.onDesktopModalClick = this.onDesktopModalClick.bind(this);
+    this.onMobileModalClick = this.onMobileModalClick.bind(this);
   }
 
   // Pulling the data from the wordpress rest api
@@ -44,16 +48,22 @@ class App extends React.Component {
 
 
   // Changing modalActive state onClick
-  onModalClick = () => {
+  onMobileModalClick = () => {
     this.setState((prevState) => {
-      return { modalActive: !prevState.modalActive };
+      return { mobileModalActive: !prevState.mobileModalActive };
     });
 
     document.body.style.overflow = 'hidden';
 
-    if(this.state.modalActive === true){
+    if(this.state.mobileModalActive === true){
       document.body.style.overflow = 'unset';
     }
+  }
+
+  onDesktopModalClick = () => {
+    this.setState((prevState) => {
+      return { desktopModalActive: !prevState.desktopModalActive };
+    });
   }
 
   render () {
@@ -83,6 +93,20 @@ class App extends React.Component {
       right: 0,
       position: 'absolute',
       zIndex: -1 
+    }
+
+    // Setting gym section bg styling
+    let gymSectionStyle = {
+      backgroundImage: `url(${gymBg})`,
+      backgroundRepeat: 'no-repeat',
+      backgroundSize: 'contain',
+      opacity: '0.3',
+      top: 0,
+      bottom: 0,
+      right: 0,
+      position: 'absolute',
+      zIndex: -1, 
+      width: '35%'
     }
 
     const modalActiveStyle = {
@@ -128,7 +152,7 @@ class App extends React.Component {
               />
 
            {/** ABOUT */}
-           <section id="about" className="lg:h-screen relative block py-12">
+           <section id="about" className="lg:h-screen relative block py-12 flex justify-center items-center ">
              <WhoAreWe
               data={this.state.homepage}
             />
@@ -144,23 +168,27 @@ class App extends React.Component {
            </section>
 
            {/** GYM */}
-           <section style={this.state.modalActive === true ? modalActiveStyle : null} id="gym" className="lg:h-screen py-12">
+           <section style={this.state.mobileModalActive === true ? modalActiveStyle : null} id="gym" className="lg:h-screen relative py-12 flex justify-center items-center">
              <Gyms
                data={this.state.homepage}
              />
+             {/* * About section background */}
+            <div style={gymSectionStyle}></div>
            </section>
 
            {/** ATHLETES */}
-           <section id="athletes" className="lg:h-screen relative py-12">
+           <section id="athletes" className="lg:h-screen relative py-12 lg:py-0">
              <Athletes
-               modalActive={this.state.modalActive}
-               onModalClick={this.onModalClick}
+               mobileModalActive={this.state.mobileModalActive}
+               onMobileModalClick={this.onMobileModalClick}
+               desktopModalActive={this.state.desktopModalActive}
+               onDesktopModalClick={this.onDesktopModalClick}
                modalActiveStyle={modalActiveStyle}
              />
            </section>
          </main>
 
-        <div style={this.state.modalActive === true ? modalActiveStyle : null}>
+        <div style={this.state.mobileModalActive === true ? modalActiveStyle : null}>
          <Footer/>
         </div>
 

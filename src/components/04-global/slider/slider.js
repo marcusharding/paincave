@@ -72,16 +72,16 @@ export class Slider extends React.Component {
       return (
         <React.Fragment>
 
-        {/* athlete information pop up mobile */}
+        {/* athlete mobile modal pop up */}
         {slides.map(slide => {
               return (
                 <React.Fragment
                 key={slide.index}
                 >
-                {this.props.modalActive === true && slide.index === this.state.current &&
-                  <div className={`lg:hidden athlete-bio__modal bg-primary ${this.props.modalActive === true ? 'rodal-zoom-enter animation-300' : 'rodal-zoom-leave animation-300'}`}>
+                {this.props.mobileModalActive === true && slide.index === this.state.current &&
+                  <div className={`lg:hidden athlete-bio__modal bg-primary ${this.props.mobileModalActive === true ? 'rodal-zoom-enter animation-300' : 'rodal-zoom-leave animation-300'}`}>
                     <div className="close__container">
-                      <button onClick={this.props.onModalClick} className="close"></button>
+                      <button onClick={this.props.onMobileModalClick} className="close"></button>
                     </div>
                     <p className="text-white text-2xl lg:text-3xl pb-2">{slide.name}</p>
                     <p className="text-white text-lg lg:text-2xl pb-2">{slide.title}</p>
@@ -92,7 +92,7 @@ export class Slider extends React.Component {
               )
             })}
 
-            <div style={this.props.modalActive === true ? this.props.modalActiveStyle : null} className="slider__controls wrapper">
+            <div style={this.props.mobileModalActive === true ? this.props.modalActiveStyle : null} className="slider__controls wrapper">
                 <SliderControl 
                 type="previous"
                 title="Go to previous slide"
@@ -106,7 +106,7 @@ export class Slider extends React.Component {
                 />
             </div>
 
-            <div style={this.props.modalActive === true ? this.props.modalActiveStyle : null} className='slider mb-4 wrapper' aria-labelledby={headingId}>
+            <div style={this.props.mobileModalActive === true ? this.props.modalActiveStyle : null} className='slider mb-4 wrapper' aria-labelledby={headingId}>
                 <ul className="slider__wrapper" style={wrapperTransform}>
                     <h3 id={headingId} className="visuallyhidden">{heading}</h3>
                     {slides.map(slide => {
@@ -117,8 +117,10 @@ export class Slider extends React.Component {
                         slide={slide}
                         current={this.state.current}
                         handleSlideClick={this.handleSlideClick}
-                        onModalClick={this.props.onModalClick}
-                        modalActive={this.props.modalActive}
+                        onDesktopModalClick={this.props.onDesktopModalClick}
+                        desktopModalActive={this.props.desktopModalActive}
+                        onMobileModalClick={this.props.onMobileModalClick}
+                        mobileModalActive={this.props.mobileModalActive}
                         />
                     )
                     })}
@@ -131,7 +133,7 @@ export class Slider extends React.Component {
                 key={slide.index}
                 >
                   {slide.index === this.state.current && 
-                    <div style={this.props.modalActive === true ? this.props.modalActiveStyle : null} className={`athlete-title__container wrapper ${slide.index === this.state.current ? 'block' : 'hidden'}`}>
+                    <div style={this.props.mobileModalActive === true ? this.props.modalActiveStyle : null} className={`athlete-title__container wrapper ${slide.index === this.state.current ? 'block' : 'hidden'}`}>
                     <p className="text-white pb-2 text-3xl">{slide.name}</p>
                     <p className="text-white uppercase text-xl">{slide.title}</p>
                     </div>

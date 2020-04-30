@@ -16,6 +16,10 @@ export class Shop extends React.Component {
             animateIn="fadeIn"
             animateOnce={true}
             >
+                <div className="wrapper">
+                    <h1 className="text-offWhite uppercase font-bold text-4xl lg:text-5xl pb-6">Our Brand</h1>
+                    <p className="text-white lg:text-xl lg:w-3/4 pb-12 lg:pb-12">A brand that reflects our values and beliefs. Designed to provide unmatched comfort whilst standing up to the most rigorous use.</p>
+                </div>
                 <div className="shop-grid__container wrapper">
                     <div className="shop-grid__mainImg relative">
                         <img alt="" className="absolute inset-0 w-full h-full" src={mainImg}></img>

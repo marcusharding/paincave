@@ -3,17 +3,17 @@ import React from 'react'
 export class Footer extends React.Component {
     render() {
         return(
-            <div className="footer bg-offBlack w-full h-auto py-6">
+            <div className="footer bg-gray-900 w-full h-auto py-6">
                 <div className="header-wrapper">
                     <div className="text-center w-full pb-6">
                         <a className='navbar-brand uppercase tracking-wider z-10 text-3xl' href="#hero" target="_blank">
                             <p className="text-offWhite font-bold">pain<span className="text-primary font-bold">cave</span></p>
-                            <p className="text-white text-xl">Elite Fitness | Supreme Strength</p>
+                            <p className="text-white text-sm">Elite Fitness | Supreme Strength</p>
                         </a>
                     </div>
-                    <div className="flex flex-row justify-between items-baseline">
+                    <div className="flex flex-row justify-between items-end">
                         <ul className="overflow">
-                            <li className="md:ml-4 lg:flex-auto">
+                            <li className="md:ml-4 flex flex-col lg:flex-row">
                                 <a className="g-nav__link text-thin text-white" data-scroll href="#about" target="_blank">
                                     About
                                 </a>
